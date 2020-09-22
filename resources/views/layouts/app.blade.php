@@ -11,13 +11,15 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">   
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/af-2.3.5/b-1.6.4/b-flash-1.6.4/cr-1.5.2/rr-1.2.7/sp-1.2.0/datatables.min.css"/>
 
@@ -60,7 +62,7 @@
                                 <a href="{{ route('ingredient.list') }}" class="nav-link">Ingredientes</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Productos</a>
+                                <a href="{{ route('product.create') }}" class="nav-link">Productos</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

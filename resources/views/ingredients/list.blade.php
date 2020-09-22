@@ -30,8 +30,12 @@
                             <td>${{ $ingredient->cost }}</td>
                             <td>
                                 <a href="{{ route('ingredient.edit', ['id'=> $ingredient->id]) }}" class="btn btn-warning">Editar</a>
-                                <a href="#" class="btn btn-danger">Borrar</a>
-                            
+                                <form action="{{ route('ingredient.delete', ['id'=> $ingredient->id]) }}" id="delete" method="POST">
+                                @method('DELETE')
+                                @csrf                                               
+
+                                <input type="submit" class="btn btn-danger" value="Borrar">
+                            </form>
                             </td>
                         </tr>
                         @endforeach

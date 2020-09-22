@@ -15,4 +15,5 @@ class ProductIngredient extends Model
     public function ingredients(){
         return $this->hasMany(Ingredient::class, 'ingredient_id');
     }
+
 }

@@ -58,4 +58,15 @@ class IngredientController extends Controller
 
         return redirect()->route('ingredient.list');
     }
+
+    public function delete($id){
+        $ingredient = Ingredient::find($id);
+
+        $ingredient->delete();
+        $message = "El ingrediente fue borrado correctamente!!!";
+
+        return redirect()->route('ingredient.list', [
+            'message' => $message
+        ]);
+    }
 }

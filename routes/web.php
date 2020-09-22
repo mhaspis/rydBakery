@@ -25,3 +25,6 @@ Route::get('/ingredients/crear', 'IngredientController@create')->name('ingredien
 Route::get('/ingredients/editar/{id}', 'IngredientController@edit')->name('ingredient.edit');
 Route::patch('/ingredients/editar/{id}', 'IngredientController@update')->name('ingredient.update');
 Route::post('/ingredients/store', 'IngredientController@store')->name('ingredient.store');
+Route::delete('/ingredients/{id}', 'IngredientController@delete')->name('ingredient.delete');
+
+Route::get('/products/crear', 'ProductController@create')->name('product.create');
